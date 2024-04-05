@@ -181,10 +181,13 @@
                     <div class="mx-auto mb-2 i-iconoir-lock w-15 h-15"></div>
                     <div class="text-center">Never ask for your identity</div>
                 </div>
-                <div class="w-30 mx-5">
+                <a
+                    href="https://github.com/AlexandreKempf/endometric"
+                    class="w-30 mx-5"
+                >
                     <div class="mx-auto mb-2 i-iconoir-github w-15 h-15"></div>
                     <div class="text-center">open-source and free to use</div>
-                </div>
+                </a>
                 <a
                     href="mailto:alexandre.kempf@cri-paris.org"
                     class="w-30 mx-5"
