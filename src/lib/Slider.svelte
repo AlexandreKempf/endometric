@@ -13,7 +13,7 @@
 
 <div class="flex my-10">
     <div class="w-70% m-auto p-5 z-10 bg-#ffffee border-rounded-5">
-        <h3 class="ml-6% mb-6 m-3 text-2xl font-bold">{question}</h3>
+        <h3 class="ml-6% mb-6 m-3 text-xl font-bold">{question}</h3>
         <div class="w-90% m-auto">
             <RangeSlider
                 bind:values

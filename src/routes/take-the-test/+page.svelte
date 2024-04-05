@@ -5,34 +5,34 @@
     import EmojiSlider from "$lib/EmojiSlider.svelte";
 
     let formContent = {
-        infoMenstruation: 0,
+        infoMenstruation: 1,
         infoAge: 30,
         pelvicPainMenstruation: 0,
         pelvicPainRest: 0,
-        pelvicPainIncrease: 0,
-        pelvicPainTiming: 0,
-        pelvicPainDagger: 0,
-        pelvicPainBack: 0,
-        pelvicPainLegs: 0,
-        pelvicPainHandicap: 0,
-        pelvicPainActivities: 0,
+        pelvicPainIncrease: 3,
+        pelvicPainTiming: 3,
+        pelvicPainDagger: 3,
+        pelvicPainBack: 3,
+        pelvicPainLegs: 3,
+        pelvicPainHandicap: 3,
+        pelvicPainActivities: 3,
         sexualPain: 0,
-        sexualPainPosition: 0,
-        sexualPainInterupt: 0,
+        sexualPainPosition: 3,
+        sexualPainInterupt: 3,
         digestivePainDuring: 0,
-        digestivePainBefore: 0,
-        digestivePainDiarrhea: 0,
+        digestivePainBefore: 3,
+        digestivePainDiarrhea: 3,
         otherPainUrinating: 0,
-        otherPainHoldingBack: 0,
-        otherPainSciatica: 0,
-        otherPainShoulder: 0,
-        otherPainFertility: 0,
+        otherPainHoldingBack: 3,
+        otherPainSciatica: 3,
+        otherPainShoulder: 3,
+        otherPainFertility: 3,
     };
 </script>
 
 <div class="text-center font-sans p-10">
     <h1 class="text-5xl font-bold">Take the test</h1>
-    <p class="text-xl">Measure your endometriosis risk.</p>
+    <p class="text-lg">Measure your endometriosis risk.</p>
 </div>
 
 <div class="flex my-10">
@@ -43,7 +43,7 @@
             <div
                 class="i-iconoir-warning-triangle text-5xl bg-#ff735d mx-3"
             ></div>
-            <p class="">
+            <p class="text-lg">
                 This test is <span class="font-bold">NOT</span> a medical
                 protocol and should <span class="font-bold">NOT</span> be used
                 as a diagnosis tool.
@@ -60,7 +60,7 @@
 <RadioButton
     question="Have you ever menstruated?"
     bind:idx={formContent.infoMenstruation}
-    choices={["❌ No", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No"]}
 />
 
 <Slider
@@ -88,43 +88,43 @@
 <RadioButton
     question="Does the pain increase with the years?"
     bind:idx={formContent.pelvicPainIncrease}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Does the pain start a few days before or ends a few days after your periods?"
     bind:idx={formContent.pelvicPainTiming}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Does the pain come in spurts, like daggers?"
     bind:idx={formContent.pelvicPainDagger}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Does the pain spread to your back?"
     bind:idx={formContent.pelvicPainBack}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Does the pain spread to your hips and legs?"
     bind:idx={formContent.pelvicPainLegs}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="The pain leads to a disability for daily activities?"
     bind:idx={formContent.pelvicPainHandicap}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="The pain leads to an inability to stand, walk, or mobilize?"
     bind:idx={formContent.pelvicPainActivities}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <h2 class="font-bold text-3xl ml-15% mt-30">Sexual intercourse pain</h2>
@@ -139,13 +139,13 @@
 <RadioButton
     question="Are certain sexual positions painful?"
     bind:idx={formContent.sexualPainPosition}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Does the pain disrupt, prevent or interrupt sexual intercourse?"
     bind:idx={formContent.sexualPainInterupt}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <h2 class="font-bold text-3xl ml-15% mt-30">Digestive pain or problems</h2>
@@ -159,13 +159,13 @@
 <RadioButton
     question="Do you often have spams, cramps, and/or intestinal pain before defecating during your periods?"
     bind:idx={formContent.digestivePainBefore}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Do you often have diarrhea and/or constipation during your periods?"
     bind:idx={formContent.digestivePainDiarrhea}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <h2 class="font-bold text-3xl ml-15% mt-30">Other pains</h2>
@@ -179,25 +179,25 @@
 <RadioButton
     question="Do you often have bladder pain when you want to urinate or holding back during your periods?"
     bind:idx={formContent.otherPainHoldingBack}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Do you often have sciatica pain during your periods?"
     bind:idx={formContent.otherPainSciatica}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Do you often have right shoulder, or right subcostal pain during your periods?"
     bind:idx={formContent.otherPainShoulder}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
     question="Do you have difficulty conceiving a child or failure to conceive for several months or years?"
     bind:idx={formContent.otherPainFertility}
-    choices={["🤷‍♀️ I don't know", "❌ No", "🤏 A little bit", "✅ Yes"]}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <div class="flex mt-20 pb-20">
