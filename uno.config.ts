@@ -8,7 +8,7 @@ export default defineConfig({
         presetIcons({ /* options */ }),
         presetWebFonts({
             fonts: {
-                sans: 'Roboto',
+                sans: 'Montserrat:200,300,900',
                 mono: ['Fira Code', 'Fira Mono:400,700'],
 
             }
