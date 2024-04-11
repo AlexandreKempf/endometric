@@ -182,6 +182,11 @@
         href="/take-the-test"
         class="w-30% min-w-90 sm:min-w-160 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 flex flex-col"
     >
+        <div class="my-5">
+            <h2 class="text-3xl font-sans text-center">
+                Measure your endometriosis risk
+            </h2>
+        </div>
         <lottie-player
             src="animation1.json"
             class="h-100 m-auto"
@@ -190,17 +195,16 @@
             loop
             autoplay
         />
-
-        <div class="mb-5">
-            <h2 class="text-3xl font-sans text-center">
-                Measure your endometriosis risk
-            </h2>
-        </div>
     </a>
     <a
         href="/help-us"
         class="w-30% min-w-90 sm:min-w-160 m-10 p-5 z-10 bg-#ffffee border-2 border-#333 border-rounded-5 flex flex-col"
     >
+        <div class="my-5">
+            <h2 class="text-3xl font-sans text-center">
+                Share your diagnosis and symptoms
+            </h2>
+        </div>
         <lottie-player
             src="animation2.json"
             class="h-120 m-auto -mt-15"
@@ -209,12 +213,6 @@
             loop
             autoplay
         />
-
-        <div class="mb-5">
-            <h2 class="text-3xl font-sans text-center">
-                Share your diagnosis and symptoms
-            </h2>
-        </div>
     </a>
 </div>
 
