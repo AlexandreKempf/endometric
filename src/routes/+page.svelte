@@ -255,7 +255,7 @@
                                 ></span
                             ></a
                         >
-                        for the background and the UI of the website
+                        for the background plants and the UI
                     </div>
                 </div>
                 <div class="mx-5">
