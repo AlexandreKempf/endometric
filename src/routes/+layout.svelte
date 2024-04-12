@@ -3,7 +3,7 @@
     import "@unocss/reset/tailwind.css";
 </script>
 
-<div class=" bg-#fff9e4">
+<div class="bg-#fff9e4">
     <div class="z-0 opacity-20 w-screen h-screen overflow-hidden fixed">
         <img
             src="plant2.svg"

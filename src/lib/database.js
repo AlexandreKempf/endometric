@@ -7,13 +7,11 @@ const supabase = createClient(
 
 async function save_answers(formContent) {
     const { error } = await supabase.from("test_answers").insert(formContent);
-    console.log(error)
 }
 
 
 async function save_diagnosis(formContent) {
     const { error } = await supabase.from("diagnosis_answers").insert(formContent);
-    console.log(error)
 }
 
 export { save_answers, save_diagnosis };

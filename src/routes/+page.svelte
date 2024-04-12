@@ -5,78 +5,72 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="text-center font-sans p-10">
-    <h1 class="text-5xl font-black">
+    <h1 class="text-4xl sm:text-5xl font-black">
         Stand together for a <br />better endometriosis diagnosis.
     </h1>
 </div>
 
-<div class="flex">
-    <div
-        class="z-10 w-screen flex flex-wrap justify-center items-center py-10 px-10%"
-    >
-        <lottie-player
-            src="animation3.json"
-            class="w-40% min-w-130 mx-auto max-h-130"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-        />
-        <div class="min-w-110 sm:min-w-160 w-30% mx-auto">
-            <h2 class="text-5xl font-light font-sans mb-10">
-                What is Endometric?
-            </h2>
-            <p class="mb-5 text-lg">
-                It is a test that pre-diagnoses endometriosis. The goal is to
-                raise awareness on this disease and its symptoms. You can either
-                take the test or share your diagnosis to improve the test and
-                help the community.
-            </p>
-            <p class="mb-10 text-lg">
-                Endometric only works thanks to people that shares their
-                diagnosis and their symptoms.
-                <span class="font-bold">Thanks to all of you!</span>
-            </p>
+<div
+    class="z-10 w-screen flex flex-wrap-reverse justify-center items-center px-10%"
+>
+    <lottie-player
+        src="animation3.json"
+        class="w-40% min-w-90 sm:min-w-130 mx-auto max-h-130"
+        background="transparent"
+        p
+        speed="1"
+        loop
+        autoplay
+    />
+    <div class="min-w-90 sm:min-w-160 w-30% mx-auto overflow-hidden">
+        <h2 class="text-5xl font-light font-sans mb-10">What is Endometric?</h2>
+        <p class="mb-5 text-lg">
+            It is a test that pre-diagnoses endometriosis. The goal is to raise
+            awareness on this disease and its symptoms. You can either take the
+            test or share your diagnosis to improve the test and help the
+            community.
+        </p>
+        <p class="mb-5 text-lg">
+            Endometric only works thanks to people that shares their diagnosis
+            and their symptoms.
+            <span class="font-bold">Thank you!</span>
+        </p>
 
-            <div class="flex justify-items mb-10">
-                <div class="w-30 mx-5">
-                    <div class="mx-auto mb-2 i-iconoir-heart text-5xl"></div>
-                    <div class="text-center text-lg">Made with love</div>
-                </div>
-                <div class="w-30 mx-5">
-                    <div class="mx-auto mb-2 i-iconoir-lock text-5xl"></div>
-                    <div class="text-center text-lg">Anonymous</div>
-                </div>
-                <a
-                    target="_blank"
-                    href="https://github.com/AlexandreKempf/endometric"
-                    class="w-30 mx-5"
-                >
-                    <div class="flex mx-auto mb-2 justify-center">
-                        <div class="text-5xl i-iconoir-github"></div>
-                        <p class="text-3xl text-#ff735d">*</p>
-                    </div>
-
-                    <div class="text-center text-lg">open-source and free</div>
-                </a>
-                <a
-                    target="_blank"
-                    href="mailto:alexandre.kempf@cri-paris.org"
-                    class="w-30 mx-5"
-                >
-                    <div class="flex mx-auto mb-2 text-5xl justify-center">
-                        <div class="text-5xl i-iconoir-cloud-download"></div>
-                        <p class="text-3xl text-#ff735d">*</p>
-                    </div>
-                    <div class="text-center text-lg">
-                        Data available on request
-                    </div>
-                </a>
+        <div class="flex flex-wrap justify-items">
+            <div class="w-30 m-5">
+                <div class="mx-auto mb-2 i-iconoir-heart text-5xl"></div>
+                <div class="text-center text-lg">Made with love</div>
             </div>
+            <div class="w-30 m-5">
+                <div class="mx-auto mb-2 i-iconoir-lock text-5xl"></div>
+                <div class="text-center text-lg">Anonymous</div>
+            </div>
+            <a
+                target="_blank"
+                href="https://github.com/AlexandreKempf/endometric"
+                class="w-30 m-5"
+            >
+                <div class="flex mx-auto mb-2 justify-center">
+                    <div class="text-5xl i-iconoir-github"></div>
+                    <p class="text-3xl text-#ff735d">*</p>
+                </div>
+
+                <div class="text-center text-lg">open-source and free</div>
+            </a>
+            <a
+                target="_blank"
+                href="mailto:alexandre.kempf@cri-paris.org"
+                class="w-30 m-5"
+            >
+                <div class="flex mx-auto mb-2 text-5xl justify-center">
+                    <div class="text-5xl i-iconoir-cloud-download"></div>
+                    <p class="text-3xl text-#ff735d">*</p>
+                </div>
+                <div class="text-center text-lg">Data available on request</div>
+            </a>
         </div>
     </div>
 </div>
-
 <div class="mx-auto h-20">
     <lottie-player
         src="scroll.json"

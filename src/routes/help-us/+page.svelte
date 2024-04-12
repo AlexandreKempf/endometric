@@ -4,7 +4,13 @@
     import RadioButton from "$lib/RadioButton.svelte";
     import EmojiSlider from "$lib/EmojiSlider.svelte";
     import CheckBoxes from "$lib/CheckBoxes.svelte";
+    import { goto } from "$app/navigation";
 
+    function sleep(seconds: number) {
+        return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+    }
+
+    let thankYouMessage: boolean = false;
     let formContent = {
         infoMenstruation: 1,
         infoEndometriosis: 1,
@@ -35,13 +41,11 @@
 </script>
 
 <div class="text-center font-sans p-10">
-    <h1 class="text-5xl font-bold">Save your diagnosis and symptoms</h1>
-    <p class="text-xl">
-        It will help us create a more accurate diagnosis for endometriosis
-    </p>
+    <h1 class="text-5xl font-bold">Share your diagnosis and symptoms</h1>
+    <p class="font-sans text-xl">if you are sure about your diagnosis.</p>
 </div>
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Personal information</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Personal information</h2>
 
 <RadioButton
     question="Have you ever menstruated?"
@@ -75,7 +79,9 @@
     choices={["🤷‍♀️ I don't know", "peritoneal", "ovarian", "deep", "other"]}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Spontaneous pelvic pain</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+    Spontaneous pelvic pain
+</h2>
 
 <EmojiSlider
     question="How much pain in the lower abdomen do you feel during your period?"
@@ -131,8 +137,12 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Sexual intercourse pain</h2>
-<p class="ml-15%">If you are not concerned you can skip this section</p>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+    Sexual intercourse pain
+</h2>
+<p class="font-sans ml-15%">
+    If you are not concerned you can skip this section
+</p>
 
 <EmojiSlider
     question="How much sharp and deep pain do you feel during sexual intercourse?"
@@ -152,7 +162,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Digestive pain or problems</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+    Digestive pain or problems
+</h2>
 
 <EmojiSlider
     question="How much pain do you have when you're defecating during your periods?"
@@ -172,7 +184,7 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Other pains</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Other pains</h2>
 
 <EmojiSlider
     question="How much pain do you have when you're urinating during your periods?"
@@ -204,14 +216,27 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<div class="flex mt-20 pb-20">
+{#if thankYouMessage}
+    <div class="text-center font-sans pt-20">
+        <p class="text-3xl sm:text-5xl font-bold">🥰 Thank you! 🥰</p>
+        <p class="font-sans text-xl mb-10">
+            Your symptoms and diagnosis will help other people.
+        </p>
+    </div>
+{/if}
+<div class="flex font-sans mt-20 pb-20">
     <button
         on:click={() => {
-            save_diagnosis(formContent);
+            if (thankYouMessage) {
+                goto("/");
+            } else {
+                save_diagnosis(formContent);
+                thankYouMessage = true;
+            }
         }}
         class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
     >
-        Save and contribute
+        {thankYouMessage ? "Return home" : "Save and contribute"}
     </button>
 </div>
 

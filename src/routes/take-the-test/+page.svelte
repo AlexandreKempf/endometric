@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
     import { save_answers } from "$lib/database.js";
     import Slider from "$lib/Slider.svelte";
     import RadioButton from "$lib/RadioButton.svelte";
     import EmojiSlider from "$lib/EmojiSlider.svelte";
+
+    let showAnswers: boolean = false;
 
     let formContent = {
         infoMenstruation: 1,
@@ -31,8 +33,8 @@
 </script>
 
 <div class="text-center font-sans p-10">
-    <h1 class="text-5xl font-bold">Take the test</h1>
-    <p class="text-lg">Measure your endometriosis risk.</p>
+    <h1 class="text-5xl font-bold">Measure your endometriosis risk</h1>
+    <p class="text-lg">if you are unsure about your diagnosis.</p>
 </div>
 
 <div class="flex my-10">
@@ -41,12 +43,12 @@
     >
         <div class="flex justify-center items-center">
             <div
-                class="i-iconoir-warning-triangle text-5xl bg-#ff735d mx-3"
+                class="i-iconoir-warning-triangle text-5xl bg-#ff735d mx-10"
             ></div>
-            <p class="text-lg">
-                This test is <span class="font-bold">NOT</span> a medical
-                protocol and should <span class="font-bold">NOT</span> be used
-                as a diagnosis tool.
+            <p class="text-lg font-sans">
+                This test is <span class="font-600">NOT</span> a medical
+                protocol and should <span class="font-600">NOT</span> be used as
+                a diagnosis tool.
                 <br />
                 At best, this test is informative and can be use as an extra motivation
                 to seek medical advice.
@@ -55,7 +57,7 @@
     </div>
 </div>
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Personal information</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Personal information</h2>
 
 <RadioButton
     question="Have you ever menstruated?"
@@ -71,7 +73,9 @@
     pipstep={5}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Spontaneous pelvic pain</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+    Spontaneous pelvic pain
+</h2>
 
 <EmojiSlider
     question="How much pain in the lower abdomen do you feel during your period?"
@@ -127,8 +131,12 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Sexual intercourse pain</h2>
-<p class="ml-15%">If you are not concerned you can skip this section</p>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+    Sexual intercourse pain
+</h2>
+<p class="font-sans ml-15%">
+    If you are not concerned you can skip this section
+</p>
 
 <EmojiSlider
     question="How much sharp and deep pain do you feel during sexual intercourse?"
@@ -148,7 +156,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Digestive pain or problems</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+    Digestive pain or problems
+</h2>
 
 <EmojiSlider
     question="How much pain do you have when you're defecating during your periods?"
@@ -168,7 +178,7 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold text-3xl ml-15% mt-30">Other pains</h2>
+<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Other pains</h2>
 
 <EmojiSlider
     question="How much pain do you have when you're urinating during your periods?"
@@ -200,16 +210,25 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<div class="flex mt-20 pb-20">
+<div class="flex font-sans mt-20 pb-10">
     <button
         on:click={() => {
             save_answers(formContent);
+            showAnswers = true;
         }}
         class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
     >
-        Measure my endometric
+        Measure my risk
     </button>
 </div>
+
+{#if showAnswers}
+    <div class="text-center font-sans pt-20">
+        <h2 class="text-3xl sm:text-5xl font-bold">
+            You have X% chance to have endometriosis
+        </h2>
+    </div>
+{/if}
 
 <style>
     :root {
