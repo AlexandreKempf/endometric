@@ -217,14 +217,14 @@
                 Special thanks to:
             </h2>
             <div class="flex justify-center flex-wrap">
-                <div class="mx-5">
+                <div class="m-5">
                     <p class="mx-auto text-center mb-2 text-5xl">🎗️</p>
                     <div class="w-40 text-lg text-center">
                         People who share their symptoms and diagnosis on this
                         website
                     </div>
                 </div>
-                <div class="mx-5">
+                <div class="m-5">
                     <p class="text-center mb-2 text-5xl">🩺</p>
                     <div class="w-40 text-lg text-center">
                         Searchers who created the
@@ -237,7 +237,7 @@
                         > (in french)
                     </div>
                 </div>
-                <div class="mx-5">
+                <div class="m-5">
                     <p class="mx-auto mb-2 text-center text-5xl">🖌️</p>
                     <div class="w-40 text-lg text-center">
                         <a
@@ -252,7 +252,7 @@
                         for the background plants and the UI
                     </div>
                 </div>
-                <div class="mx-5">
+                <div class="m-5">
                     <p class="mx-auto mb-2 text-center text-5xl">⚡</p>
                     <div class="w-40 text-lg text-center">
                         <a
