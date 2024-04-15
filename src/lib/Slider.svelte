@@ -20,6 +20,7 @@
                 {min}
                 {max}
                 {pipstep}
+                springValues={{ stiffness: 0.1, damping: 0.6 }}
                 float
                 pips
                 all="label"

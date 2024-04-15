@@ -3,6 +3,7 @@
     import Slider from "$lib/Slider.svelte";
     import RadioButton from "$lib/RadioButton.svelte";
     import EmojiSlider from "$lib/EmojiSlider.svelte";
+    import { goto } from "$app/navigation";
 
     let showAnswers: boolean = false;
 
@@ -96,7 +97,7 @@
 />
 
 <RadioButton
-    question="Does the pain start a few days before or ends a few days after your periods?"
+    question="Does the pain start a few days before or ends a few days after your period?"
     bind:idx={formContent.pelvicPainTiming}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
@@ -161,19 +162,19 @@
 </h2>
 
 <EmojiSlider
-    question="How much pain do you have when you're defecating during your periods?"
+    question="How much pain do you have when you're defecating during your period?"
     bind:idx={formContent.digestivePainDuring}
     choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
 />
 
 <RadioButton
-    question="Do you often have spams, cramps, and/or intestinal pain before defecating during your periods?"
+    question="Do you often have spams, cramps, and/or intestinal pain before defecating during your period?"
     bind:idx={formContent.digestivePainBefore}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="Do you often have diarrhea and/or constipation during your periods?"
+    question="Do you often have diarrhea and/or constipation during your period?"
     bind:idx={formContent.digestivePainDiarrhea}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
@@ -181,25 +182,25 @@
 <h2 class="font-bold font-sans text-3xl ml-15% mt-30">Other pains</h2>
 
 <EmojiSlider
-    question="How much pain do you have when you're urinating during your periods?"
+    question="How much pain do you have when you're urinating during your period?"
     bind:idx={formContent.otherPainUrinating}
     choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
 />
 
 <RadioButton
-    question="Do you often have bladder pain when you want to urinate or holding back during your periods?"
+    question="Do you often have bladder pain when you want to urinate or holding back during your period?"
     bind:idx={formContent.otherPainHoldingBack}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="Do you often have sciatica pain during your periods?"
+    question="Do you often have sciatica pain during your period?"
     bind:idx={formContent.otherPainSciatica}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="Do you often have right shoulder, or right subcostal pain during your periods?"
+    question="Do you often have right shoulder, or right subcostal pain during your period?"
     bind:idx={formContent.otherPainShoulder}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
@@ -210,25 +211,28 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<div class="flex font-sans mt-20 pb-10">
+{#if showAnswers}
+    <div class="text-center font-sans pt-20">
+        <p class="text-3xl sm:text-5xl font-bold">
+            You have X% chance to have endometriosis
+        </p>
+    </div>
+{/if}
+<div class="flex font-sans mt-20 pb-20">
     <button
         on:click={() => {
-            save_answers(formContent);
-            showAnswers = true;
+            if (showAnswers) {
+                goto("/");
+            } else {
+                save_answers(formContent);
+                showAnswers = true;
+            }
         }}
         class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
     >
-        Measure my risk
+        {showAnswers ? "Return home" : "Measure my risk"}
     </button>
 </div>
-
-{#if showAnswers}
-    <div class="text-center font-sans pt-20">
-        <h2 class="text-3xl sm:text-5xl font-bold">
-            You have X% chance to have endometriosis
-        </h2>
-    </div>
-{/if}
 
 <style>
     :root {

@@ -70,13 +70,13 @@
 <CheckBoxes
     question="Was your endometriosis confirmed by a medical exam?"
     bind:indexes={formContent.infoEndometriosisMethod}
-    choices={["🩻 IRM", "🩹 Surgery", "🔬 Histology", "🩺 Other", "❌ No"]}
+    choices={["🩻 MRI", "🩹 Surgery", "🔬 Histology", "🩺 Other", "❌ No"]}
 />
 
 <CheckBoxes
     question="What type of endometriosis do you have?"
     bind:indexes={formContent.infoEndometriosisType}
-    choices={["🤷‍♀️ I don't know", "peritoneal", "ovarian", "deep", "other"]}
+    choices={["Peritoneal", "Ovarian", "Deep", "Other", "🤷‍♀️ I don't know"]}
 />
 
 <h2 class="font-bold font-sans text-3xl ml-15% mt-30">
@@ -102,7 +102,7 @@
 />
 
 <RadioButton
-    question="Does the pain start a few days before or ends a few days after your periods?"
+    question="Does the pain start a few days before or ends a few days after your period?"
     bind:idx={formContent.pelvicPainTiming}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
@@ -126,19 +126,19 @@
 />
 
 <RadioButton
-    question="The pain leads to a disability for daily activities?"
+    question="Does the pain lead to a disability for daily activities?"
     bind:idx={formContent.pelvicPainHandicap}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="The pain leads to an inability to stand, walk, or mobilize?"
+    question="Does the pain lead to an inability to stand, walk, or move?"
     bind:idx={formContent.pelvicPainActivities}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <h2 class="font-bold font-sans text-3xl ml-15% mt-30">
-    Sexual intercourse pain
+    Pain during sexual intercourse
 </h2>
 <p class="font-sans ml-15%">
     If you are not concerned you can skip this section
@@ -167,19 +167,19 @@
 </h2>
 
 <EmojiSlider
-    question="How much pain do you have when you're defecating during your periods?"
+    question="How much pain do you have when you're defecating during your period?"
     bind:idx={formContent.digestivePainDuring}
     choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
 />
 
 <RadioButton
-    question="Do you often have spams, cramps, and/or intestinal pain before defecating during your periods?"
+    question="Do you often have spams, cramps, and/or intestinal pain before defecating during your period?"
     bind:idx={formContent.digestivePainBefore}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="Do you often have diarrhea and/or constipation during your periods?"
+    question="Do you often have diarrhea and/or constipation during your period?"
     bind:idx={formContent.digestivePainDiarrhea}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
@@ -187,31 +187,31 @@
 <h2 class="font-bold font-sans text-3xl ml-15% mt-30">Other pains</h2>
 
 <EmojiSlider
-    question="How much pain do you have when you're urinating during your periods?"
+    question="How much pain do you have when you're urinating during your period?"
     bind:idx={formContent.otherPainUrinating}
     choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
 />
 
 <RadioButton
-    question="Do you often have bladder pain when you want to urinate or holding back during your periods?"
+    question="Do you often have bladder pain when you want to urinate or while holding back during your period?"
     bind:idx={formContent.otherPainHoldingBack}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="Do you often have sciatica pain during your periods?"
+    question="Do you often have sciatica pain during your period?"
     bind:idx={formContent.otherPainSciatica}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="Do you often have right shoulder, or right subcostal pain during your periods?"
+    question="Do you often have right shoulder, or right subcostal pain during your period?"
     bind:idx={formContent.otherPainShoulder}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
-    question="Do you have difficulty conceiving a child or failure to conceive for several months or years?"
+    question="Have you had difficulties conceiving a child for several months or years?"
     bind:idx={formContent.otherPainFertility}
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />

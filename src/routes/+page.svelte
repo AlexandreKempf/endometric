@@ -6,16 +6,16 @@
 
 <div class="text-center font-sans p-10">
     <h1 class="text-4xl sm:text-5xl font-black">
-        Stand together for a <br />better endometriosis diagnosis.
+        Stand together for a <br />better diagnosis of endometriosis.
     </h1>
 </div>
 
 <div
-    class="z-10 w-screen flex flex-wrap-reverse justify-center items-center px-10%"
+    class="z-10 w-100% flex flex-wrap-reverse justify-center items-center px-10%"
 >
     <lottie-player
         src="animation3.json"
-        class="w-40% min-w-90 sm:min-w-130 mx-auto max-h-130"
+        class="w-40% min-w-90 0 sm:min-w-130 mx-auto"
         background="transparent"
         p
         speed="1"
@@ -25,13 +25,13 @@
     <div class="min-w-90 sm:min-w-160 w-30% mx-auto overflow-hidden">
         <h2 class="text-5xl font-light font-sans mb-10">What is Endometric?</h2>
         <p class="mb-5 text-lg">
-            It is a test that pre-diagnoses endometriosis. The goal is to raise
-            awareness on this disease and its symptoms. You can either take the
-            test or share your diagnosis to improve the test and help the
+            It is a test that helps pre-diagnose endometriosis. The goal is to
+            raise awareness on this disease and its symptoms. You can either
+            take the test or share your diagnosis to improve it and help the
             community.
         </p>
         <p class="mb-5 text-lg">
-            Endometric only works thanks to people that shares their diagnosis
+            Endometric only works thanks to people that share their diagnosis
             and their symptoms.
             <span class="font-bold">Thank you!</span>
         </p>
@@ -55,7 +55,7 @@
                     <p class="text-3xl text-#ff735d">*</p>
                 </div>
 
-                <div class="text-center text-lg">open-source and free</div>
+                <div class="text-center text-lg">Open-source and free</div>
             </a>
             <a
                 target="_blank"
@@ -84,14 +84,14 @@
 
 <div class="flex">
     <div
-        class="bg-#375a64 z-10 w-screen flex flex-wrap justify-center items-center py-20 px-10%"
+        class="bg-#375a64 z-10 w-100% flex flex-wrap justify-center items-center py-20 px-5% lg:px-10%"
     >
-        <div class="min-w-110 sm:min-w-160 w-30% mx-auto text-#ffffee">
+        <div class="md:min-w-160 lg:w-30% text-#ffffee mx-10">
             <h2 class="text-5xl font-light font-sans mb-10">
                 What is Endometriosis?
             </h2>
             <p class="mb-5 text-lg">
-                It is a disease that concern at least 10% of people who
+                It is a disease that concerns at least 10% of people who
                 menstruate. Cells that are supposed to be inside the uterus,
                 grow outside it in the pelvic area. These cells grow and shrink
                 with the menstrual cycle, leading to internal bleeds, cysts, and
@@ -100,7 +100,7 @@
             <p class="mb-5 text-lg">
                 Endometriosis can be extremely painful during period, ovulation,
                 sexual intercourse, etc. It can also lead to infertility. It is
-                diagnosed with an IRM or surgery, but the average time before
+                diagnosed with an MRI or surgery, but the average time before
                 diagnosis is around 7 years.
             </p>
             <p class="mb-5 text-lg">
@@ -112,17 +112,17 @@
                         class="text-3xl text-#ff735d"
                         >*
                     </span></a
-                > but it was only done with a small sample size. In average studies
-                using AI and endometriosis diagnosis, only count 300 patients (control
+                > but it was done with a small sample size. In average studies using
+                AI and endometriosis diagnosis, only count 300 patients (control
                 included).
             </p>
 
             <p class="mb-10 text-lg font-bold">
-                Endometriosis symptoms are very diverse and we believe we can
+                Symptoms of endometriosis are very diverse and we believe we can
                 improve its pre-diagnosis if we include more testimonies.
             </p>
         </div>
-        <div class="mt-10 mx-auto text-#ffffee font-sans">
+        <div class="mt-10 text-#ffffee font-sans mx-10">
             <a
                 target="_blank"
                 href="https://www.nature.com/articles/s41572-018-0008-5"
@@ -211,9 +211,9 @@
 </div>
 
 <div class="flex">
-    <div class="bg-#375a64 z-10 w-screen py-30">
-        <div class="min-w-110 sm:min-w-160 mx-10% text-#ffffee">
-            <h2 class="text-5xl font-bold font-sans mb-10">
+    <div class="bg-#375a64 z-10 w-100% py-30">
+        <div class="sm:min-w-160 mx-10% text-#ffffee">
+            <h2 class="text-5xl text-center font-bold font-sans mb-10">
                 Special thanks to:
             </h2>
             <div class="flex justify-center flex-wrap">
