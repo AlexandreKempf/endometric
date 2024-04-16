@@ -4,31 +4,34 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="text-center font-sans p-10">
-    <h1 class="text-4xl sm:text-5xl font-black">
-        Stand together for a <br />better diagnosis of endometriosis.
+<div class="text-center font-sans pt-5 p-10 mb-5">
+    <h1 class="text-4xl sm:text-7xl font-black">
+        WELCOME TO<br />
+        <span>ENDOMETRIC</span>
     </h1>
+    <p class="text-0.885em sm:text-1.76em">
+        Stand together for a better diagnosis.
+    </p>
 </div>
 
 <div
-    class="z-10 w-100% flex flex-wrap-reverse justify-center items-center px-10%"
+    class="z-10 w-100% flex flex-wrap justify-center items-center px-10% font-sans"
 >
     <lottie-player
-        src="animation3.json"
-        class="w-40% min-w-90 0 sm:min-w-130 mx-auto"
+        src="animation0.json"
+        class="w-40% min-w-90 0 mb-10 sm:min-w-130 mx-auto"
         background="transparent"
         p
         speed="1"
-        loop
         autoplay
     />
     <div class="min-w-90 sm:min-w-160 w-30% mx-auto overflow-hidden">
-        <h2 class="text-5xl font-light font-sans mb-10">What is Endometric?</h2>
+        <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHAT?</h2>
         <p class="mb-5 text-lg">
-            It is a test that helps pre-diagnose endometriosis. The goal is to
-            raise awareness on this disease and its symptoms. You can either
-            take the test or share your diagnosis to improve it and help the
-            community.
+            Endometric is a test that helps pre-diagnose endometriosis. The goal
+            is to raise awareness on this disease and its symptoms. You can
+            either take the test or share your diagnosis to improve it and help
+            the community.
         </p>
         <p class="mb-5 text-lg">
             Endometric only works thanks to people that share their diagnosis
@@ -52,7 +55,7 @@
             >
                 <div class="flex mx-auto mb-2 justify-center">
                     <div class="text-5xl i-iconoir-github"></div>
-                    <p class="text-3xl text-#ff735d">*</p>
+                    <p class="text-3xl font-mono text-#ff735d">*</p>
                 </div>
 
                 <div class="text-center text-lg">Open-source and free</div>
@@ -64,7 +67,7 @@
             >
                 <div class="flex mx-auto mb-2 text-5xl justify-center">
                     <div class="text-5xl i-iconoir-cloud-download"></div>
-                    <p class="text-3xl text-#ff735d">*</p>
+                    <p class="text-3xl font-mono text-#ff735d">*</p>
                 </div>
                 <div class="text-center text-lg">Data available on request</div>
             </a>
@@ -82,17 +85,58 @@
     />
 </div>
 
-<div class="flex">
+<div class="flex font-sans">
     <div
-        class="bg-#375a64 z-10 w-100% flex flex-wrap justify-center items-center py-20 px-5% lg:px-10%"
+        class="bg-#375a64 z-10 w-100% flex flex-wrap justify-center items-center py-10"
     >
-        <div class="md:min-w-160 lg:w-30% text-#ffffee mx-10">
-            <h2 class="text-5xl font-light font-sans mb-10">
-                What is Endometriosis?
-            </h2>
+        <a
+            href="/take-the-test"
+            class="w-30% min-w-90 sm:min-w-160 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 flex flex-col"
+        >
+            <div class="my-5">
+                <h2 class="text-3xl font-bold text-center">
+                    Measure your<br />endometriosis risk
+                </h2>
+            </div>
+            <lottie-player
+                src="animation1.json"
+                class="h-100 mx-auto"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+            />
+        </a>
+        <a
+            href="/help-us"
+            class="w-30% min-w-90 sm:min-w-160 m-10 p-5 z-10 bg-#ffffee border-2 border-#333 border-rounded-5 flex flex-col"
+        >
+            <div class="my-5">
+                <h2 class="text-3xl font-bold font-sans text-center">
+                    Share your diagnosis<br />and symptoms
+                </h2>
+            </div>
+            <lottie-player
+                src="animation3.json"
+                class="h-120 mx-auto -mt-20"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+            />
+        </a>
+    </div>
+</div>
+
+<div class="flex font-sans">
+    <div
+        class="w-100% bg-#fff9e4 z-10 bg-opacity-50 flex flex-wrap justify-center items-end py-20 px-5% lg:px-10%"
+    >
+        <div class="opacity-100 md:min-w-160 lg:w-30% mx-10">
+            <h2 class="text-5xl font-bold mb-5">WHY?</h2>
             <p class="mb-5 text-lg">
-                It is a disease that concerns at least 10% of people who
-                menstruate. Cells that are supposed to be inside the uterus,
+                Endometriosis is a disease that concerns at least 10% of people
+                who menstruate. Cells that are supposed to be inside the uterus,
                 grow outside it in the pelvic area. These cells grow and shrink
                 with the menstrual cycle, leading to internal bleeds, cysts, and
                 scar tissues.
@@ -109,7 +153,7 @@
                     href="https://www.sciencedirect.com/science/article/pii/S0015028221018094"
                 >
                     A french test for pre-diagnosis using AI already exists<span
-                        class="text-3xl text-#ff735d"
+                        class="text-3xl font-mono text-#ff735d"
                         >*
                     </span></a
                 > but it was done with a small sample size. In average studies using
@@ -117,18 +161,18 @@
                 included).
             </p>
 
-            <p class="mb-10 text-lg font-bold">
+            <p class="text-lg font-bold">
                 Symptoms of endometriosis are very diverse and we believe we can
                 improve its pre-diagnosis if we include more testimonies.
             </p>
         </div>
-        <div class="mt-10 text-#ffffee font-sans mx-10">
+        <div class="mx-10">
             <a
                 target="_blank"
                 href="https://www.nature.com/articles/s41572-018-0008-5"
             >
                 <h2 class="text-5xl text-center font-bold">10-15%</h2>
-                <p class="text-center text-lg mb-10">
+                <p class="text-center text-lg mb-8">
                     of menstruating people<span
                         class="text-3xl font-mono text-#ff735d">*</span
                     >
@@ -139,7 +183,7 @@
                 href="https://www.nature.com/articles/s41746-022-00638-1?fromPaywallRec=false"
             >
                 <h2 class="text-5xl text-center font-bold">6-12 years</h2>
-                <p class="text-center text-lg mb-10">
+                <p class="text-center text-lg mb-8">
                     diagnostic delay<span
                         class="text-3xl font-mono text-#ff735d">*</span
                     >
@@ -150,7 +194,7 @@
                 href="https://www.nature.com/articles/s41746-022-00638-1?fromPaywallRec=false"
             >
                 <h2 class="text-5xl text-center font-bold">300 people</h2>
-                <p class="text-center text-lg mb-10">
+                <p class="text-center text-lg mb-8">
                     average sample size in studies<span
                         class="text-3xl font-mono text-#ff735d">*</span
                     >
@@ -171,61 +215,24 @@
     </div>
 </div>
 
-<div class="flex flex-wrap justify-center py-20">
-    <a
-        href="/take-the-test"
-        class="w-30% min-w-90 sm:min-w-160 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 flex flex-col"
-    >
-        <div class="my-5">
-            <h2 class="text-3xl font-sans text-center">
-                Measure your endometriosis risk
-            </h2>
-        </div>
-        <lottie-player
-            src="animation1.json"
-            class="h-100 m-auto"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-        />
-    </a>
-    <a
-        href="/help-us"
-        class="w-30% min-w-90 sm:min-w-160 m-10 p-5 z-10 bg-#ffffee border-2 border-#333 border-rounded-5 flex flex-col"
-    >
-        <div class="my-5">
-            <h2 class="text-3xl font-sans text-center">
-                Share your diagnosis and symptoms
-            </h2>
-        </div>
-        <lottie-player
-            src="animation2.json"
-            class="h-120 m-auto -mt-15"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-        />
-    </a>
-</div>
-
-<div class="flex">
-    <div class="bg-#375a64 z-10 w-100% py-30">
+<div class="flex font-sans">
+    <div class="bg-#375a64 z-10 w-100% p-10">
         <div class="sm:min-w-160 mx-10% text-#ffffee">
-            <h2 class="text-5xl text-center font-bold font-sans mb-10">
-                Special thanks to:
-            </h2>
+            <h2 class="text-5xl text-center font-bold mb-5">WHO?</h2>
             <div class="flex justify-center flex-wrap">
                 <div class="m-5">
-                    <p class="mx-auto text-center mb-2 text-5xl">🎗️</p>
+                    <div
+                        class="i-fluent-emoji-high-contrast:people-hugging mx-auto mb-2 text-center text-5xl"
+                    ></div>
                     <div class="w-40 text-lg text-center">
                         People who share their symptoms and diagnosis on this
                         website
                     </div>
                 </div>
                 <div class="m-5">
-                    <p class="text-center mb-2 text-5xl">🩺</p>
+                    <div
+                        class="i-fluent-emoji-high-contrast:microscope mx-auto mb-2 text-center text-5xl"
+                    ></div>
                     <div class="w-40 text-lg text-center">
                         Searchers who created the
                         <a
@@ -238,7 +245,9 @@
                     </div>
                 </div>
                 <div class="m-5">
-                    <p class="mx-auto mb-2 text-center text-5xl">🖌️</p>
+                    <div
+                        class="i-fluent-emoji-high-contrast:paintbrush mx-auto mb-2 text-center text-5xl"
+                    ></div>
                     <div class="w-40 text-lg text-center">
                         <a
                             target="_blank"
@@ -253,7 +262,9 @@
                     </div>
                 </div>
                 <div class="m-5">
-                    <p class="mx-auto mb-2 text-center text-5xl">⚡</p>
+                    <div
+                        class="i-fluent-emoji-high-contrast:artist-palette mx-auto mb-2 text-center text-5xl"
+                    ></div>
                     <div class="w-40 text-lg text-center">
                         <a
                             target="_blank"
@@ -264,6 +275,17 @@
                                 ></span
                             ></a
                         >
+                        and
+                        <a
+                            target="_blank"
+                            href="https://www.linkedin.com/in/sagarprajapati/"
+                            ><span class="font-bold"
+                                >Sagar Gediya<span
+                                    class="font-mono text-#ff735d">*</span
+                                ></span
+                            ></a
+                        >
+
                         who created the animations
                     </div>
                 </div>

@@ -10,6 +10,7 @@
     let formContent = {
         infoMenstruation: 1,
         infoAge: 30,
+        infoFamily: 3,
         pelvicPainMenstruation: 0,
         pelvicPainRest: 0,
         pelvicPainIncrease: 3,
@@ -33,32 +34,31 @@
     };
 </script>
 
-<div class="text-center font-sans p-10">
-    <h1 class="text-5xl font-bold">Measure your endometriosis risk</h1>
-    <p class="text-lg">if you are unsure about your diagnosis.</p>
+<div class="text-center font-sans pt-5 p-10 mb-5">
+    <h1 class="text-4xl sm:text-7xl font-black">MEASURE<br />YOUR RISK</h1>
+    <p class="font-sans sm:text-2xl">If you are unsure about your diagnosis.</p>
 </div>
 
 <div class="flex my-10">
     <div
-        class="w-50% m-auto p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5"
+        class="w-80% sm:w-50% m-auto p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5"
     >
         <div class="flex justify-center items-center">
             <div
-                class="i-iconoir-warning-triangle text-5xl bg-#ff735d mx-10"
+                class="i-iconoir-warning-triangle text-5xl w-50 bg-#ff735d mx-10"
             ></div>
             <p class="text-lg font-sans">
                 This test is <span class="font-600">NOT</span> a medical
-                protocol and should <span class="font-600">NOT</span> be used as
-                a diagnosis tool.
-                <br />
-                At best, this test is informative and can be use as an extra motivation
-                to seek medical advice.
+                protocol and its result should <span class="font-600">NOT</span>
+                be used as a medical diagnosis.
             </p>
         </div>
     </div>
 </div>
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Personal information</h2>
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-15">
+    Personal information
+</h2>
 
 <RadioButton
     question="Have you ever menstruated?"
@@ -74,7 +74,13 @@
     pipstep={5}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+<RadioButton
+    question="Do you have endometriosis in your family?"
+    bind:idx={formContent.infoFamily}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+/>
+
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
     Spontaneous pelvic pain
 </h2>
 
@@ -132,10 +138,10 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
-    Sexual intercourse pain
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
+    Pain during sexual intercourse
 </h2>
-<p class="font-sans ml-15%">
+<p class="font-sans text-xl ml-15%">
     If you are not concerned you can skip this section
 </p>
 
@@ -157,7 +163,7 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
     Digestive pain or problems
 </h2>
 
@@ -179,7 +185,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Other pains</h2>
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
+    Other pains
+</h2>
 
 <EmojiSlider
     question="How much pain do you have when you're urinating during your period?"

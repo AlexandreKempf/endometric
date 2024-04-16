@@ -13,6 +13,7 @@
     let thankYouMessage: boolean = false;
     let formContent = {
         infoMenstruation: 1,
+        infoFamily: 3,
         infoEndometriosis: 1,
         infoEndometriosisMethod: [],
         infoEndometriosisType: [],
@@ -40,12 +41,14 @@
     };
 </script>
 
-<div class="text-center font-sans p-10">
-    <h1 class="text-5xl font-bold">Share your diagnosis and symptoms</h1>
-    <p class="font-sans text-xl">if you are sure about your diagnosis.</p>
+<div class="text-center font-sans pt-5 p-10 mb-5">
+    <h1 class="text-4xl sm:text-7xl font-black">SHARE YOUR<br />DIAGNOSIS</h1>
+    <p class="font-sans text-2xl">If you are sure about your diagnosis.</p>
 </div>
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Personal information</h2>
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-15">
+    Personal information
+</h2>
 
 <RadioButton
     question="Have you ever menstruated?"
@@ -58,7 +61,13 @@
     bind:idx={formContent.infoAge}
     min={10}
     max={70}
-    pipstep={5}
+    pipstep={10}
+/>
+
+<RadioButton
+    question="Do you have endometriosis in your family?"
+    bind:idx={formContent.infoFamily}
+    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
 <RadioButton
@@ -79,7 +88,7 @@
     choices={["Peritoneal", "Ovarian", "Deep", "Other", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
     Spontaneous pelvic pain
 </h2>
 
@@ -137,10 +146,10 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
     Pain during sexual intercourse
 </h2>
-<p class="font-sans ml-15%">
+<p class="font-sans text-xl ml-15%">
     If you are not concerned you can skip this section
 </p>
 
@@ -162,7 +171,7 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
     Digestive pain or problems
 </h2>
 
@@ -184,7 +193,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="font-bold font-sans text-3xl ml-15% mt-30">Other pains</h2>
+<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
+    Other pains
+</h2>
 
 <EmojiSlider
     question="How much pain do you have when you're urinating during your period?"
