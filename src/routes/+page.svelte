@@ -4,85 +4,97 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class="text-center font-sans pt-5 p-10 mb-5">
-    <h1 class="text-4xl sm:text-7xl font-black">
-        WELCOME TO<br />
-        <span>ENDOMETRIC</span>
-    </h1>
-    <p class="text-0.885em sm:text-1.76em">
-        Stand together for a better diagnosis.
-    </p>
-</div>
+<div class="flex">
+    <div class="bg-#fff9e4 z-10 bg-opacity-100 sm:bg-opacity-50">
+        <div class="text-center font-sans pt-5 p-10 mb-5">
+            <h1 class="text-4xl sm:text-7xl font-black">
+                WELCOME TO<br />
+                <span>ENDOMETRIC</span>
+            </h1>
+            <p class="text-0.885em sm:text-1.76em">
+                Stand together for a better diagnosis.
+            </p>
+        </div>
 
-<div
-    class="z-10 w-100% flex flex-wrap justify-center items-center px-10% font-sans"
->
-    <lottie-player
-        src="animation0.json"
-        class="w-40% min-w-90 0 mb-10 sm:min-w-130 mx-auto"
-        background="transparent"
-        p
-        speed="1"
-        autoplay
-    />
-    <div class="min-w-90 sm:min-w-160 w-30% mx-auto overflow-hidden">
-        <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHAT?</h2>
-        <p class="mb-5 text-lg">
-            Endometric is a test that helps pre-diagnose endometriosis. The goal
-            is to raise awareness on this disease and its symptoms. You can
-            either take the test or share your diagnosis to improve it and help
-            the community.
-        </p>
-        <p class="mb-5 text-lg">
-            Endometric only works thanks to people that share their diagnosis
-            and their symptoms.
-            <span class="font-bold">Thank you!</span>
-        </p>
+        <div
+            class="w-100% flex flex-wrap justify-center items-center px-2% font-sans"
+        >
+            <lottie-player
+                src="animation0.json"
+                class="w-40% min-w-90 0 mb-10 sm:min-w-130"
+                background="transparent"
+                p
+                speed="1"
+                autoplay
+            />
+            <div class="min-w-90 md:min-w-160 md:w-30%">
+                <h2 class="text-4xl sm:text-5smxl font-bold mb-5">WHAT?</h2>
+                <p class="mb-5 text-lg">
+                    Endometric is a test that helps pre-diagnose endometriosis.
+                    The goal is to raise awareness on this disease and its
+                    symptoms. You can either take the test or share your
+                    diagnosis to improve it and help the community.
+                </p>
+                <p class="mb-5 text-lg">
+                    Endometric only works thanks to people that share their
+                    diagnosis and their symptoms.
+                    <span class="font-bold">Thank you!</span>
+                </p>
 
-        <div class="flex flex-wrap justify-items">
-            <div class="w-30 m-5">
-                <div class="mx-auto mb-2 i-iconoir-heart text-5xl"></div>
-                <div class="text-center text-lg">Made with love</div>
-            </div>
-            <div class="w-30 m-5">
-                <div class="mx-auto mb-2 i-iconoir-lock text-5xl"></div>
-                <div class="text-center text-lg">Anonymous</div>
-            </div>
-            <a
-                target="_blank"
-                href="https://github.com/AlexandreKempf/endometric"
-                class="w-30 m-5"
-            >
-                <div class="flex mx-auto mb-2 justify-center">
-                    <div class="text-5xl i-iconoir-github"></div>
-                    <p class="text-3xl font-mono text-#ff735d">*</p>
+                <div class="flex flex-wrap justify-center">
+                    <div class="w-30 m-5">
+                        <div
+                            class="mx-auto mb-2 i-iconoir-heart text-5xl"
+                        ></div>
+                        <div class="text-center text-lg">Made with love</div>
+                    </div>
+                    <div class="w-30 m-5">
+                        <div class="mx-auto mb-2 i-iconoir-lock text-5xl"></div>
+                        <div class="text-center text-lg">Anonymous</div>
+                    </div>
+                    <a
+                        target="_blank"
+                        href="https://github.com/AlexandreKempf/endometric"
+                        class="w-30 m-5"
+                    >
+                        <div class="flex mx-auto mb-2 justify-center">
+                            <div class="text-5xl i-iconoir-github"></div>
+                            <p class="text-3xl font-mono text-#ff735d">*</p>
+                        </div>
+
+                        <div class="text-center text-lg">
+                            Open-source and free
+                        </div>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="mailto:alexandre.kempf@cri-paris.org"
+                        class="w-30 m-5"
+                    >
+                        <div class="flex mx-auto mb-2 text-5xl justify-center">
+                            <div
+                                class="text-5xl i-iconoir-cloud-download"
+                            ></div>
+                            <p class="text-3xl font-mono text-#ff735d">*</p>
+                        </div>
+                        <div class="text-center text-lg">
+                            Data available on request
+                        </div>
+                    </a>
                 </div>
-
-                <div class="text-center text-lg">Open-source and free</div>
-            </a>
-            <a
-                target="_blank"
-                href="mailto:alexandre.kempf@cri-paris.org"
-                class="w-30 m-5"
-            >
-                <div class="flex mx-auto mb-2 text-5xl justify-center">
-                    <div class="text-5xl i-iconoir-cloud-download"></div>
-                    <p class="text-3xl font-mono text-#ff735d">*</p>
-                </div>
-                <div class="text-center text-lg">Data available on request</div>
-            </a>
+            </div>
+        </div>
+        <div class="mx-auto h-20">
+            <lottie-player
+                src="scroll.json"
+                class="h-15 m-auto {y > 200 ? 'hidden' : ''}"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+            />
         </div>
     </div>
-</div>
-<div class="mx-auto h-20">
-    <lottie-player
-        src="scroll.json"
-        class="h-15 m-auto {y > 200 ? 'hidden' : ''}"
-        background="transparent"
-        speed="1"
-        loop
-        autoplay
-    />
 </div>
 
 <div class="flex font-sans">
@@ -91,7 +103,7 @@
     >
         <a
             href="/take-the-test"
-            class="w-30% min-w-90 sm:min-w-160 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 flex flex-col"
+            class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 flex flex-col"
         >
             <div class="my-5">
                 <h2 class="text-3xl font-bold text-center">
@@ -109,7 +121,7 @@
         </a>
         <a
             href="/help-us"
-            class="w-30% min-w-90 sm:min-w-160 m-10 p-5 z-10 bg-#ffffee border-2 border-#333 border-rounded-5 flex flex-col"
+            class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 z-10 bg-#ffffee border-2 border-#333 border-rounded-5 flex flex-col"
         >
             <div class="my-5">
                 <h2 class="text-3xl font-bold font-sans text-center">
@@ -130,9 +142,9 @@
 
 <div class="flex font-sans">
     <div
-        class="w-100% bg-#fff9e4 z-10 bg-opacity-50 flex flex-wrap justify-center items-end py-20 px-5% lg:px-10%"
+        class="w-100% bg-#fff9e4 z-10 bg-opacity-100 sm:bg-opacity-50 flex flex-wrap justify-center items-end py-20 px-2% lg:px-10%"
     >
-        <div class="opacity-100 md:min-w-160 lg:w-30% mx-10">
+        <div class="opacity-100 md:min-w-130 md:w-48%">
             <h2 class="text-5xl font-bold mb-5">WHY?</h2>
             <p class="mb-5 text-lg">
                 Endometriosis is a disease that concerns at least 10% of people
@@ -166,7 +178,7 @@
                 improve its pre-diagnosis if we include more testimonies.
             </p>
         </div>
-        <div class="mx-10">
+        <div class="mx-20 mt-10">
             <a
                 target="_blank"
                 href="https://www.nature.com/articles/s41572-018-0008-5"
@@ -217,7 +229,7 @@
 
 <div class="flex font-sans">
     <div class="bg-#375a64 z-10 w-100% p-10">
-        <div class="sm:min-w-160 mx-10% text-#ffffee">
+        <div class="sm:min-w-130 text-#ffffee">
             <h2 class="text-5xl text-center font-bold mb-5">WHO?</h2>
             <div class="flex justify-center flex-wrap">
                 <div class="m-5">
@@ -254,7 +266,8 @@
                             href="https://www.instagram.com/cornesdegazelle/"
                             ><span class="font-bold"
                                 >CornesDeGazelle<span
-                                    class="font-mono text-#ff735d">*</span
+                                    class="font-mono font-normal text-#ff735d"
+                                    >*</span
                                 ></span
                             ></a
                         >
@@ -270,7 +283,8 @@
                             target="_blank"
                             href="https://www.linkedin.com/in/boltbite/"
                             ><span class="font-bold"
-                                >Bolt Bite<span class="font-mono text-#ff735d"
+                                >Bolt Bite<span
+                                    class="font-mono font-normal text-#ff735d"
                                     >*</span
                                 ></span
                             ></a
@@ -281,7 +295,8 @@
                             href="https://www.linkedin.com/in/sagarprajapati/"
                             ><span class="font-bold"
                                 >Sagar Gediya<span
-                                    class="font-mono text-#ff735d">*</span
+                                    class="font-mono font-normal text-#ff735d"
+                                    >*</span
                                 ></span
                             ></a
                         >

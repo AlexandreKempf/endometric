@@ -56,7 +56,9 @@
     </div>
 </div>
 
-<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-15">
+<h2
+    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-15"
+>
     Personal information
 </h2>
 
@@ -71,7 +73,7 @@
     bind:idx={formContent.infoAge}
     min={10}
     max={70}
-    pipstep={5}
+    pipstep={10}
 />
 
 <RadioButton
@@ -80,7 +82,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
+<h2
+    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+>
     Spontaneous pelvic pain
 </h2>
 
@@ -138,7 +142,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
+<h2
+    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+>
     Pain during sexual intercourse
 </h2>
 <p class="font-sans text-xl ml-15%">
@@ -163,7 +169,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
+<h2
+    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+>
     Digestive pain or problems
 </h2>
 
@@ -185,7 +193,9 @@
     choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
 />
 
-<h2 class="text-4xl sm:text-5xl font-bold font-sans ml-15% mt-30">
+<h2
+    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+>
     Other pains
 </h2>
 
@@ -226,7 +236,7 @@
         </p>
     </div>
 {/if}
-<div class="flex font-sans mt-20 pb-20">
+<div class="flex font-sans {showAnswers ? 'mt-10' : 'mt-20'} pb-20">
     <button
         on:click={() => {
             if (showAnswers) {
