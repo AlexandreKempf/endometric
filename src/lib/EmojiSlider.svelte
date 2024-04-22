@@ -4,6 +4,7 @@
     export let question: string;
     export let idx: number;
     export let choices: string[] = [];
+    export let name: string;
 
     let values = [idx];
     $: idx = values[0];
@@ -22,6 +23,7 @@
                 springValues={{ stiffness: 0.1, damping: 0.6 }}
             />
         </div>
+        <input class="hidden" {name} type="number" bind:value={values[0]} />
         <div class="w-100% sm:w-80% m-auto flex justify-between center-items">
             {#each choices as choice}
                 <p class="text-xl">{choice}</p>

@@ -6,6 +6,7 @@
     export let min: number;
     export let max: number;
     export let pipstep: number;
+    export let name: string;
 
     let values = [idx];
     $: idx = values[0];
@@ -27,6 +28,7 @@
                 pips
                 all="label"
             />
+            <input class="hidden" type="number" {name} bind:value={values[0]} />
         </div>
     </div>
 </div>

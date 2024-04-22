@@ -1,37 +1,11 @@
 <script lang="ts">
-    import { save_answers } from "$lib/database.js";
     import Slider from "$lib/Slider.svelte";
     import RadioButton from "$lib/RadioButton.svelte";
     import EmojiSlider from "$lib/EmojiSlider.svelte";
+    import { enhance } from "$app/forms"; // Import the enhance action
     import { goto } from "$app/navigation";
 
-    let showAnswers: boolean = false;
-
-    let formContent = {
-        infoMenstruation: 1,
-        infoAge: 30,
-        infoFamily: 3,
-        pelvicPainMenstruation: 0,
-        pelvicPainRest: 0,
-        pelvicPainIncrease: 3,
-        pelvicPainTiming: 3,
-        pelvicPainDagger: 3,
-        pelvicPainBack: 3,
-        pelvicPainLegs: 3,
-        pelvicPainHandicap: 3,
-        pelvicPainActivities: 3,
-        sexualPain: 0,
-        sexualPainPosition: 3,
-        sexualPainInterupt: 3,
-        digestivePainDuring: 0,
-        digestivePainBefore: 3,
-        digestivePainDiarrhea: 3,
-        otherPainUrinating: 0,
-        otherPainHoldingBack: 3,
-        otherPainSciatica: 3,
-        otherPainShoulder: 3,
-        otherPainFertility: 3,
-    };
+    export let form;
 </script>
 
 <div class="text-center font-sans pt-5 p-10 mb-5">
@@ -56,201 +30,227 @@
     </div>
 </div>
 
-<h2
-    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-15"
->
-    Personal information
-</h2>
-
-<RadioButton
-    question="Have you ever menstruated?"
-    bind:idx={formContent.infoMenstruation}
-    choices={["✅ Yes", "❌ No"]}
-/>
-
-<Slider
-    question="How old are you?"
-    bind:idx={formContent.infoAge}
-    min={10}
-    max={70}
-    pipstep={10}
-/>
-
-<RadioButton
-    question="Do you have endometriosis in your family?"
-    bind:idx={formContent.infoFamily}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<h2
-    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
->
-    Spontaneous pelvic pain
-</h2>
-
-<EmojiSlider
-    question="How much pain in the lower abdomen do you feel during your period?"
-    bind:idx={formContent.pelvicPainMenstruation}
-    choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
-/>
-
-<EmojiSlider
-    question="How much pain in the lower abdomen do you feel when you don't have your period?"
-    bind:idx={formContent.pelvicPainRest}
-    choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
-/>
-
-<RadioButton
-    question="Does the pain increase with the years?"
-    bind:idx={formContent.pelvicPainIncrease}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Does the pain start a few days before or ends a few days after your period?"
-    bind:idx={formContent.pelvicPainTiming}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Does the pain come in spurts, like daggers?"
-    bind:idx={formContent.pelvicPainDagger}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Does the pain spread to your back?"
-    bind:idx={formContent.pelvicPainBack}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Does the pain spread to your hips and legs?"
-    bind:idx={formContent.pelvicPainLegs}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="The pain leads to a disability for daily activities?"
-    bind:idx={formContent.pelvicPainHandicap}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="The pain leads to an inability to stand, walk, or mobilize?"
-    bind:idx={formContent.pelvicPainActivities}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<h2
-    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
->
-    Pain during sexual intercourse
-</h2>
-<p class="font-sans text-xl ml-15%">
-    If you are not concerned you can skip this section
-</p>
-
-<EmojiSlider
-    question="How much sharp and deep pain do you feel during sexual intercourse?"
-    bind:idx={formContent.sexualPain}
-    choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
-/>
-
-<RadioButton
-    question="Are certain sexual positions painful?"
-    bind:idx={formContent.sexualPainPosition}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Does the pain disrupt, prevent or interrupt sexual intercourse?"
-    bind:idx={formContent.sexualPainInterupt}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<h2
-    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
->
-    Digestive pain or problems
-</h2>
-
-<EmojiSlider
-    question="How much pain do you have when you're defecating during your period?"
-    bind:idx={formContent.digestivePainDuring}
-    choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
-/>
-
-<RadioButton
-    question="Do you often have spams, cramps, and/or intestinal pain before defecating during your period?"
-    bind:idx={formContent.digestivePainBefore}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Do you often have diarrhea and/or constipation during your period?"
-    bind:idx={formContent.digestivePainDiarrhea}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<h2
-    class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
->
-    Other pains
-</h2>
-
-<EmojiSlider
-    question="How much pain do you have when you're urinating during your period?"
-    bind:idx={formContent.otherPainUrinating}
-    choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
-/>
-
-<RadioButton
-    question="Do you often have bladder pain when you want to urinate or holding back during your period?"
-    bind:idx={formContent.otherPainHoldingBack}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Do you often have sciatica pain during your period?"
-    bind:idx={formContent.otherPainSciatica}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Do you often have right shoulder, or right subcostal pain during your period?"
-    bind:idx={formContent.otherPainShoulder}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-<RadioButton
-    question="Do you have difficulty conceiving a child or failure to conceive for several months or years?"
-    bind:idx={formContent.otherPainFertility}
-    choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
-/>
-
-{#if showAnswers}
-    <div class="text-center font-sans pt-20">
-        <p class="text-3xl sm:text-5xl font-bold">
-            You have X% chance to have endometriosis
-        </p>
-    </div>
-{/if}
-<div class="flex font-sans {showAnswers ? 'mt-10' : 'mt-20'} pb-20">
-    <button
-        on:click={() => {
-            if (showAnswers) {
-                goto("/");
-            } else {
-                save_answers(formContent);
-                showAnswers = true;
-            }
-        }}
-        class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
+<form method="POST" use:enhance>
+    <h2
+        class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-15"
     >
-        {showAnswers ? "Return home" : "Measure my risk"}
-    </button>
-</div>
+        Personal information
+    </h2>
+
+    <RadioButton
+        question="Have you ever menstruated?"
+        idx={1}
+        choices={["✅ Yes", "❌ No"]}
+        name="infoMenstruation"
+    />
+
+    <Slider
+        question="How old are you?"
+        idx={30}
+        min={10}
+        max={70}
+        pipstep={10}
+        name="infoAge"
+    />
+
+    <RadioButton
+        question="Do you have endometriosis in your family?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="infoFamily"
+    />
+
+    <h2
+        class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+    >
+        Spontaneous pelvic pain
+    </h2>
+
+    <EmojiSlider
+        question="How much pain in the lower abdomen do you feel during your period?"
+        idx={0}
+        choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
+        name="pelvicPainMenstruation"
+    />
+
+    <EmojiSlider
+        question="How much pain in the lower abdomen do you feel when you don't have your period?"
+        idx={0}
+        choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
+        name="pelvicPainRest"
+    />
+
+    <RadioButton
+        question="Does the pain increase with the years?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="pelvicPainIncrease"
+    />
+
+    <RadioButton
+        question="Does the pain start a few days before or ends a few days after your period?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="pelvicPainTiming"
+    />
+
+    <RadioButton
+        question="Does the pain come in spurts, like daggers?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="pelvicPainDagger"
+    />
+
+    <RadioButton
+        question="Does the pain spread to your back?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="pelvicPainBack"
+    />
+
+    <RadioButton
+        question="Does the pain spread to your hips and legs?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="pelvicPainLegs"
+    />
+
+    <RadioButton
+        question="The pain leads to a disability for daily activities?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="pelvicPainHandicap"
+    />
+
+    <RadioButton
+        question="The pain leads to an inability to stand, walk, or mobilize?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="pelvicPainActivities"
+    />
+
+    <h2
+        class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+    >
+        Pain during sexual intercourse
+    </h2>
+    <p class="font-sans text-xl ml-15%">
+        If you are not concerned you can skip this section
+    </p>
+
+    <EmojiSlider
+        question="How much sharp and deep pain do you feel during sexual intercourse?"
+        idx={0}
+        choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
+        name="sexualPain"
+    />
+
+    <RadioButton
+        question="Are certain sexual positions painful?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="sexualPainPosition"
+    />
+
+    <RadioButton
+        question="Does the pain disrupt, prevent or interrupt sexual intercourse?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="sexualPainInterupt"
+    />
+
+    <h2
+        class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+    >
+        Digestive pain or problems
+    </h2>
+
+    <EmojiSlider
+        question="How much pain do you have when you're defecating during your period?"
+        idx={0}
+        choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
+        name="digestivePainDuring"
+    />
+
+    <RadioButton
+        question="Do you often have spams, cramps, and/or intestinal pain before defecating during your period?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="digestivePainBefore"
+    />
+
+    <RadioButton
+        question="Do you often have diarrhea and/or constipation during your period?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="digestivePainDiarrhea"
+    />
+
+    <h2
+        class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
+    >
+        Other pains
+    </h2>
+
+    <EmojiSlider
+        question="How much pain do you have when you're urinating during your period?"
+        idx={0}
+        choices={["😊", "😐", "😕", "😟", "😖", "😭"]}
+        name="otherPainUrinating"
+    />
+
+    <RadioButton
+        question="Do you often have bladder pain when you want to urinate or holding back during your period?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="otherPainHoldingBack"
+    />
+
+    <RadioButton
+        question="Do you often have sciatica pain during your period?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="otherPainSciatica"
+    />
+
+    <RadioButton
+        question="Do you often have right shoulder, or right subcostal pain during your period?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="otherPainShoulder"
+    />
+
+    <RadioButton
+        question="Do you have difficulty conceiving a child or failure to conceive for several months or years?"
+        idx={3}
+        choices={["✅ Yes", "❌ No", "🤏 A little bit", "🤷‍♀️ I don't know"]}
+        name="otherPainFertility"
+    />
+
+    {#if form?.success}
+        <div class="text-center font-sans pt-20">
+            <p class="text-3xl sm:text-5xl font-bold">
+                You have X% chance to have endometriosis
+            </p>
+        </div>
+        <div class="flex font-sans mt-10 pb-20">
+            <button
+                on:click={() => goto("/")}
+                class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
+            >
+                Return to the home page
+            </button>
+        </div>
+    {:else}
+        <div class="flex font-sans 'mt-20 pb-20">
+            <button
+                class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
+            >
+                Measure my risk
+            </button>
+        </div>
+    {/if}
+</form>
 
 <style>
     :root {

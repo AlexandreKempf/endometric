@@ -2,7 +2,7 @@
     export let question: string;
     export let idx: number;
     export let choices: string[] = [];
-
+    export let name: string;
     let options = choices.map((choice, i) => {
         return {
             value: i,
@@ -24,6 +24,7 @@
                         bind:group={idx}
                         type="radio"
                         value={option.value}
+                        {name}
                     />
                     {option.label}
                 </label>

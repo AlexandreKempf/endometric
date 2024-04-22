@@ -2,6 +2,7 @@
     export let question: string;
     export let indexes: number[];
     export let choices: string[] = [];
+    export let name: string;
 
     let options = choices.map((choice, i) => {
         return {
@@ -24,6 +25,7 @@
                         type="checkbox"
                         bind:group={indexes}
                         value={option.value}
+                        {name}
                     />
                     {option.label}
                 </label>
