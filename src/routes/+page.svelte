@@ -28,7 +28,7 @@
                 autoplay
             />
             <div class="min-w-90 md:min-w-160 md:w-30%">
-                <h2 class="text-4xl sm:text-5smxl font-bold mb-5">WHAT?</h2>
+                <h2 class="text-5xl font-bold mb-5">WHAT?</h2>
                 <p class="mb-5 text-lg">
                     Endometric is a test that helps pre-diagnose endometriosis.
                     The goal is to raise awareness on this disease and its
@@ -98,45 +98,49 @@
 </div>
 
 <div class="flex font-sans">
-    <div
-        class="bg-#375a64 z-10 w-100% flex flex-wrap justify-center items-center py-10"
-    >
-        <a
-            href="/take-the-test"
-            class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 flex flex-col"
-        >
-            <div class="my-5">
-                <h2 class="text-3xl font-bold text-center">
-                    Measure your<br />endometriosis risk
-                </h2>
-            </div>
-            <lottie-player
-                src="animation1.json"
-                class="h-100 mx-auto"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-            />
-        </a>
-        <a
-            href="/help-us"
-            class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 z-10 bg-#ffffee border-2 border-#333 border-rounded-5 flex flex-col"
-        >
-            <div class="my-5">
-                <h2 class="text-3xl font-bold font-sans text-center">
-                    Share your diagnosis<br />and symptoms
-                </h2>
-            </div>
-            <lottie-player
-                src="animation3.json"
-                class="h-120 mx-auto -mt-20"
-                background="transparent"
-                speed="1"
-                loop
-                autoplay
-            />
-        </a>
+    <div class="bg-#375a64 z-10 w-100% py-10">
+        <h2 class="text-5xl mb-5 font-bold text-center text-#ffffee">HOW?</h2>
+        <p class="text-lg text-center text-#ffffee">
+            Click on one of the buttons below.
+        </p>
+        <div class="flex flex-wrap justify-center items-center">
+            <a
+                href="/take-the-test"
+                class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 shadow-xl flex flex-col"
+            >
+                <div class="my-5">
+                    <h2 class="text-3xl font-bold text-center">
+                        Measure your<br />endometriosis risk
+                    </h2>
+                </div>
+                <lottie-player
+                    src="animation1.json"
+                    class="h-100 mx-auto"
+                    background="transparent"
+                    speed="1"
+                    loop
+                    autoplay
+                />
+            </a>
+            <a
+                href="/help-us"
+                class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 z-10 bg-#ffffee border-2 border-#333 border-rounded-5 shadow-xl flex flex-col"
+            >
+                <div class="my-5">
+                    <h2 class="text-3xl font-bold font-sans text-center">
+                        Share your diagnosis<br />and symptoms
+                    </h2>
+                </div>
+                <lottie-player
+                    src="animation3.json"
+                    class="h-120 mx-auto -mt-20"
+                    background="transparent"
+                    speed="1"
+                    loop
+                    autoplay
+                />
+            </a>
+        </div>
     </div>
 </div>
 
