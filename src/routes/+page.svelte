@@ -5,8 +5,10 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="flex">
-    <div class="bg-#fff9e4 z-10 bg-opacity-100 sm:bg-opacity-50">
-        <div class="text-center font-sans pt-5 p-10 mb-5">
+    <div class="bg-#fff9e4 z-10 bg-opacity-60 sm:bg-opacity-40 md:bg-opacity-0">
+        <div
+            class="text-center font-sans pt-5 p-10 mb-5 drop-shadow-[0_1.2px_1.2px_rgba(251,233,171,0.8)]"
+        >
             <h1 class="text-4xl sm:text-7xl font-black">
                 WELCOME TO<br />
                 <span>ENDOMETRIC</span>
@@ -20,20 +22,22 @@
             class="w-100% flex flex-wrap justify-center items-center px-2% font-sans"
         >
             <lottie-player
-                src="animation0.json"
-                class="w-40% min-w-90 0 mb-10 sm:min-w-130"
+                src="animation4.json"
+                class="w-40% min-w-90 0 mb-10 sm:min-w-170"
                 background="transparent"
                 p
                 speed="1"
                 autoplay
             />
-            <div class="min-w-90 md:min-w-160 md:w-30%">
-                <h2 class="text-5xl font-bold mb-5">WHAT?</h2>
+            <div
+                class="min-w-90 md:min-w-170 md:w-30% drop-shadow-[0_0px_1px_rgba(251,233,171,1.0)]"
+            >
+                <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHAT?</h2>
                 <p class="mb-5 text-lg">
                     Endometric is a test that helps pre-diagnose endometriosis.
                     The goal is to raise awareness on this disease and its
                     symptoms. You can either take the test or share your
-                    diagnosis to improve it and help the community.
+                    diagnosis to improve the test and help the community.
                 </p>
                 <p class="mb-5 text-lg">
                     Endometric only works thanks to people that share their
@@ -41,21 +45,21 @@
                     <span class="font-bold">Thank you!</span>
                 </p>
 
-                <div class="flex flex-wrap justify-center">
-                    <div class="w-30 m-5">
+                <div class="flex flex-wrap">
+                    <div class="w-25 m-5">
                         <div
                             class="mx-auto mb-2 i-iconoir-heart text-5xl"
                         ></div>
                         <div class="text-center text-lg">Made with love</div>
                     </div>
-                    <div class="w-30 m-5">
+                    <div class="w-25 m-5">
                         <div class="mx-auto mb-2 i-iconoir-lock text-5xl"></div>
                         <div class="text-center text-lg">Anonymous</div>
                     </div>
                     <a
                         target="_blank"
                         href="https://github.com/AlexandreKempf/endometric"
-                        class="w-30 m-5"
+                        class="w-25 m-5"
                     >
                         <div class="flex mx-auto mb-2 justify-center">
                             <div class="text-5xl i-iconoir-github"></div>
@@ -69,7 +73,7 @@
                     <a
                         target="_blank"
                         href="mailto:alexandre.kempf@cri-paris.org"
-                        class="w-30 m-5"
+                        class="w-25 m-5"
                     >
                         <div class="flex mx-auto mb-2 text-5xl justify-center">
                             <div
@@ -98,8 +102,12 @@
 </div>
 
 <div class="flex font-sans">
-    <div class="bg-#375a64 z-10 w-100% py-10">
-        <h2 class="text-5xl mb-5 font-bold text-center text-#ffffee">HOW?</h2>
+    <div class="bg-#3a907c z-10 w-100% py-10">
+        <h2
+            class="text-4xl sm:text-5xl mb-5 font-bold text-center text-#ffffee"
+        >
+            HOW?
+        </h2>
         <p class="text-lg text-center text-#ffffee">
             Click on one of the buttons below.
         </p>
@@ -146,10 +154,10 @@
 
 <div class="flex font-sans">
     <div
-        class="w-100% bg-#fff9e4 z-10 bg-opacity-100 sm:bg-opacity-50 flex flex-wrap justify-center items-end py-20 px-2% lg:px-10%"
+        class="w-100% bg-#fff9e4 z-10 bg-opacity-60 sm:bg-opacity-40 md:bg-opacity-0 flex flex-wrap justify-center items-end py-20 px-2% lg:px-10% drop-shadow-[0_0px_1px_rgba(251,233,171,1.0)]"
     >
         <div class="opacity-100 md:min-w-130 md:w-48%">
-            <h2 class="text-5xl font-bold mb-5">WHY?</h2>
+            <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHY?</h2>
             <p class="mb-5 text-lg">
                 Endometriosis is a disease that concerns at least 10% of people
                 who menstruate. Cells that are supposed to be inside the uterus,
@@ -234,7 +242,9 @@
 <div class="flex font-sans">
     <div class="bg-#375a64 z-10 w-100% p-10">
         <div class="sm:min-w-130 text-#ffffee">
-            <h2 class="text-5xl text-center font-bold mb-5">WHO?</h2>
+            <h2 class="text-4xl sm:text-5xl text-center font-bold mb-5">
+                WHO?
+            </h2>
             <div class="flex justify-center flex-wrap">
                 <div class="m-5">
                     <div
