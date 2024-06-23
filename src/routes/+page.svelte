@@ -111,6 +111,10 @@
         <p class="text-lg text-center text-#ffffee">
             Click on one of the buttons below.
         </p>
+        <p class="text-lg text-center text-#ffffee">
+            We need more diagnosis to create a robust model to detect
+            endometriosis
+        </p>
         <div class="flex flex-wrap justify-center items-center">
             <a
                 class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 shadow-xl flex flex-col"
