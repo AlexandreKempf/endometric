@@ -113,22 +113,24 @@
         </p>
         <div class="flex flex-wrap justify-center items-center">
             <a
-                href="/take-the-test"
                 class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 shadow-xl flex flex-col"
             >
                 <div class="my-5">
-                    <h2 class="text-3xl font-bold text-center">
+                    <h2 class="text-3xl font-bold text-center opacity-30">
                         Measure your<br />endometriosis risk
                     </h2>
                 </div>
                 <lottie-player
                     src="animation1.json"
-                    class="h-100 mx-auto"
+                    class="h-100 mx-auto opacity-30"
                     background="transparent"
                     speed="1"
                     loop
                     autoplay
                 />
+                <h2 class="text-xl font-bold text-center -m-1">
+                    Not available yet
+                </h2>
             </a>
             <a
                 href="/help-us"
