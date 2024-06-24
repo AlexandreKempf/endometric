@@ -125,7 +125,7 @@
                     </h2>
                 </div>
                 <lottie-player
-                    src="animation1.json"
+                    src="animation5.json"
                     class="h-100 mx-auto opacity-30"
                     background="transparent"
                     speed="1"
@@ -146,7 +146,7 @@
                     </h2>
                 </div>
                 <lottie-player
-                    src="animation3.json"
+                    src="animation6.json"
                     class="h-120 mx-auto -mt-20"
                     background="transparent"
                     speed="1"
@@ -324,6 +324,46 @@
                         who created the animations
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="flex font-sans">
+    <div
+        class="w-100% bg-#fff9e4 z-10 bg-opacity-60 sm:bg-opacity-40 md:bg-opacity-0 flex flex-wrap justify-center items-end py-20 px-2% lg:px-10% drop-shadow-[0_0px_1px_rgba(251,233,171,1.0)]"
+    >
+        <div class="opacity-100 md:min-w-130 md:w-80%">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHERE?</h2>
+            <p class="mb-5 text-lg">
+                You can find more ressources on endometriosis in these websites:
+            </p>
+
+            <p class="font-sans text-2xl text-center mt-10 mb-5 font-bold">
+                🇺🇸 USA
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-5">
+                <a target="_blank" href="https://endofound.org/">
+                    <img src="endofound.webp" class="w-50" />
+                </a>
+                <a target="_blank" href="https://endometriosisassn.org/">
+                    <img src="endometriosisassn.webp" class="w-50" />
+                </a>
+            </div>
+
+            <p class="font-sans text-2xl text-center mt-10 mb-5 font-bold">
+                🇫🇷 French
+            </p>
+            <div class="flex flex-wrap justify-center items-center gap-5">
+                <a target="_blank" href="https://endofrance.org/">
+                    <img src="endofrance.webp" class="w-50" />
+                </a>
+                <a target="_blank" href="https://endomind.org/">
+                    <img src="endomind.webp" class="w-50" />
+                </a>
+                <a target="_blank" href="https://www.info-endometriose.fr/">
+                    <img src="info-endometriose.webp" class="w-50" />
+                </a>
             </div>
         </div>
     </div>
