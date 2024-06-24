@@ -337,7 +337,7 @@
         <div class="opacity-100 md:min-w-130 md:w-80%">
             <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHERE?</h2>
             <p class="mb-5 text-lg">
-                You can find more ressources on endometriosis in these websites:
+                You can find more resources on endometriosis in these websites:
             </p>
 
             <p class="font-sans text-2xl text-center mt-10 mb-5 font-bold">
