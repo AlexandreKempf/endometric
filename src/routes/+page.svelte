@@ -111,10 +111,6 @@
         <p class="text-lg text-center text-#ffffee">
             Click on one of the buttons below.
         </p>
-        <p class="text-lg text-center text-#ffffee">
-            We need more diagnosis to create a robust model to detect
-            endometriosis
-        </p>
         <div class="flex flex-wrap justify-center items-center">
             <a
                 class="w-95% sm:w-35% min-w-90 sm:min-w-131 m-10 p-5 border-2 z-10 bg-#ffffee border-#333 border-rounded-5 shadow-xl flex flex-col"
@@ -132,9 +128,14 @@
                     loop
                     autoplay
                 />
-                <h2 class="text-xl font-bold text-center -m-1">
+                <h2 class="text-xl font-bold text-center -mt-1">
                     Not available yet
                 </h2>
+
+                <p class="text-lg text-center">
+                    We need more diagnosis to create a robust model that detects
+                    endometriosis
+                </p>
             </a>
             <a
                 href="/help-us"
@@ -147,7 +148,7 @@
                 </div>
                 <lottie-player
                     src="animation6.json"
-                    class="h-120 mx-auto -mt-20"
+                    class="h-140 mx-auto -mt-20"
                     background="transparent"
                     speed="1"
                     loop
@@ -352,7 +353,7 @@
             </div>
 
             <p class="font-sans text-2xl text-center mt-10 mb-5 font-bold">
-                🇫🇷 French
+                🇫🇷 France
             </p>
             <div class="flex flex-wrap justify-center items-center gap-5">
                 <a target="_blank" href="https://endofrance.org/">
