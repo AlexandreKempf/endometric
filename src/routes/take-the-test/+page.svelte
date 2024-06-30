@@ -329,12 +329,14 @@
                 >
                     <button
                         on:click={() => goto("/")}
+                        formaction="?/goto_medic"
                         class="m-5 p-5 max-w-70% bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
                     >
                         Fight the pain
                     </button>
                     <button
                         on:click={() => goto("/")}
+                        formaction="?/goto_homepage"
                         class="m-5 p-5 max-w-70% bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
                     >
                         Return to the home page
@@ -343,6 +345,7 @@
             {:else}
                 <div class="flex font-sans mt-20 pb-20">
                     <button
+                        formaction="?/save_form"
                         class="min-w-110 m-auto p-5 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
                     >
                         Measure my risk

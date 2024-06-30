@@ -1,7 +1,7 @@
 import { supabase } from "$lib/supabaseClient";
 
 export const actions = {
-    default: async ({ request }) => {
+    save_form: async ({ request }) => {
         const formData = await request.formData();
 
         let formContent = new Object();
@@ -18,4 +18,6 @@ export const actions = {
         console.log(error)
         return error ? { error: error } : { success: true };
     },
+    goto_medic: async ({ request }) => { },
+    goto_homepage: async ({ request }) => { },
 };

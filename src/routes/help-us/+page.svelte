@@ -351,6 +351,7 @@
                     <button
                         on:click={() => goto("/")}
                         class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
+                        formaction="?/goto_homepage"
                     >
                         Return to the home page
                     </button>
@@ -358,6 +359,7 @@
             {:else}
                 <div class="flex font-sans 'mt-20 pb-20">
                     <button
+                        formaction="?/save_form"
                         class="min-w-110 m-auto p-5 z-10 bg-#ff735d border-rounded-5 text-white font-bold text-2xl"
                     >
                         Save and contribute
