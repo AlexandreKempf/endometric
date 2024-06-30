@@ -5,7 +5,7 @@
 <svelte:window bind:scrollY={y} />
 
 <div class="flex">
-    <div class="bg-#fff9e4 z-10 bg-opacity-60 sm:bg-opacity-40 md:bg-opacity-0">
+    <div class="bg-#fff9e4 z-10 bg-opacity-80 sm:bg-opacity-40 md:bg-opacity-0">
         <div
             class="text-center font-sans pt-5 p-10 mb-5 drop-shadow-[0_1.2px_1.2px_rgba(251,233,171,0.8)]"
         >
@@ -30,7 +30,7 @@
                 autoplay
             />
             <div
-                class="min-w-90 md:min-w-170 md:w-30% drop-shadow-[0_0px_1px_rgba(251,233,171,1.0)]"
+                class="min-w-90 md:min-w-150 md:w-30% drop-shadow-[0_0px_1px_rgba(251,233,171,1.0)]"
             >
                 <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHAT?</h2>
                 <p class="mb-5 text-lg">
@@ -129,12 +129,12 @@
                     autoplay
                 />
                 <h2 class="text-xl font-bold text-center -mt-1">
-                    Not available yet
+                    Soon available.
                 </h2>
 
                 <p class="text-lg text-center">
-                    We need more diagnosis to create a robust model that detects
-                    endometriosis
+                    We need your contribution to create the endometriosis
+                    detector.
                 </p>
             </a>
             <a
@@ -335,35 +335,66 @@
         class="w-100% bg-#fff9e4 z-10 bg-opacity-60 sm:bg-opacity-40 md:bg-opacity-0 flex flex-wrap justify-center items-end py-20 px-2% lg:px-10% drop-shadow-[0_0px_1px_rgba(251,233,171,1.0)]"
     >
         <div class="opacity-100 md:min-w-130 md:w-80%">
-            <h2 class="text-4xl sm:text-5xl font-bold mb-5">WHERE?</h2>
-            <p class="mb-5 text-lg">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-5 text-center">
+                WHERE?
+            </h2>
+            <p class="mb-5 text-lg text-center">
                 You can find more resources on endometriosis in these websites:
             </p>
 
-            <p class="font-sans text-2xl text-center mt-10 mb-5 font-bold">
-                🇺🇸 USA
-            </p>
-            <div class="flex flex-wrap justify-center items-center gap-5">
+            <div class="text-center max-w-95% md:max-w-45% mx-auto">
+                <h3 class="font-sans text-2xl mt-10 mb-5 font-bold">🇺🇸 USA</h3>
                 <a target="_blank" href="https://endofound.org/">
-                    <img src="endofound.webp" class="w-50" />
+                    <p class="font-sans my-5">
+                        <span class="font-bold text-#3B907D">endofound.org</span
+                        > <br /> Increases endometriosis awareness, fund landmark
+                        research, provide advocacy and support for patients, and
+                        educate the public and medical community.
+                    </p>
                 </a>
                 <a target="_blank" href="https://endometriosisassn.org/">
-                    <img src="endometriosisassn.webp" class="w-50" />
+                    <p class="font-sans my-5">
+                        <span class="font-bold text-#3B907D"
+                            >endometriosisassn.org</span
+                        > <br /> Provides support to those affected by endometriosis
+                        and related diseases, educates about the disease, promotes
+                        and conducts research.
+                    </p>
+                </a>
+                <a target="_blank" href="https://endometriosis.org/">
+                    <p class="font-sans my-5">
+                        <span class="font-bold text-#3B907D"
+                            >endometriosis.org</span
+                        > <br /> Provides current information and news about endometriosis.
+                    </p>
                 </a>
             </div>
-
-            <p class="font-sans text-2xl text-center mt-10 mb-5 font-bold">
-                🇫🇷 France
-            </p>
-            <div class="flex flex-wrap justify-center items-center gap-5">
+            <div class="text-center max-w-95% md:max-w-45% mx-auto">
+                <h3 class="font-sans text-2xl mt-10 mb-5 font-bold">
+                    🇫🇷 France
+                </h3>
                 <a target="_blank" href="https://endofrance.org/">
-                    <img src="endofrance.webp" class="w-50" />
+                    <p class="font-sans my-5">
+                        <span class="font-bold text-#3B907D"
+                            >endofrance.org</span
+                        > <br /> Première association de lutte contre l’endométriose
+                        a avoir été créée en France en 2001.
+                    </p>
                 </a>
                 <a target="_blank" href="https://endomind.org/">
-                    <img src="endomind.webp" class="w-50" />
+                    <p class="font-sans my-5">
+                        <span class="font-bold text-#3B907D">endomind.org</span>
+                        <br /> Association Française d'actions contre l'endométriose.
+                    </p>
                 </a>
+
                 <a target="_blank" href="https://www.info-endometriose.fr/">
-                    <img src="info-endometriose.webp" class="w-50" />
+                    <p class="font-sans my-5">
+                        <span class="font-bold text-#3B907D"
+                            >info-endometriose.fr</span
+                        > <br /> Association de référence pour l’information sur
+                        l’endométriose.
+                    </p>
                 </a>
             </div>
         </div>
