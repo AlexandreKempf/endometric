@@ -262,7 +262,7 @@
                         website
                     </div>
                 </div>
-                <div class="m-5">
+                <!-- <div class="m-5">
                     <div
                         class="i-fluent-emoji-high-contrast:microscope mx-auto mb-2 text-center text-5xl"
                     ></div>
@@ -276,7 +276,7 @@
                             ></a
                         > (in french)
                     </div>
-                </div>
+                </div> -->
                 <div class="m-5">
                     <div
                         class="i-fluent-emoji-high-contrast:paintbrush mx-auto mb-2 text-center text-5xl"

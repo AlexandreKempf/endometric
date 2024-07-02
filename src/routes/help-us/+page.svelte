@@ -95,7 +95,7 @@
                     name="infoEndometriosisTypeArray"
                 />
 
-                <h2
+                <!-- <h2
                     class="text-4xl sm:text-5xl font-bold font-sans ml-2% sm:ml-6% md:ml-15% mt-30"
                 >
                     Spontaneous pelvic pain
@@ -335,7 +335,7 @@
                         "🤷‍♀️ I don't know",
                     ]}
                     name="otherPainFertility"
-                />
+                /> -->
             {/if}
 
             {#if form?.success}
