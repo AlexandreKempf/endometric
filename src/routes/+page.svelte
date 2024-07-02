@@ -250,7 +250,7 @@
     <div class="bg-#375a64 z-10 w-100% p-10">
         <div class="sm:min-w-130 text-#ffffee">
             <h2 class="text-4xl sm:text-5xl text-center font-bold mb-5">
-                WHO?
+                Thank you!
             </h2>
             <div class="flex justify-center flex-wrap">
                 <div class="m-5">
